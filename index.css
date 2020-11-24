@@ -1,0 +1,74 @@
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+  background-color: #101020;
+  color: #f0f0f0;
+  font-family: "Arial", sans-serif;
+}
+
+h1 {
+  color: #ffffe0;
+  text-align: center;
+}
+
+h2 {
+  color: #ffffff;
+  text-align: center;
+}
+
+h3 {
+  color: #eoffff;
+  text-align: center;
+}
+
+ul {
+  text-align: left;
+  display:inline-block;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+p {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.long_blank
+{
+   min-height: 2000px;
+}
+
+.rightcolumn
+{
+  float: right;
+  max-width: 50%;
+}
+
+.picture
+{
+  float: right;
+  max-width: 50%;
+}
+
+.leftcolumn
+{
+  max-width: 50%;
+}
+
+.clear {
+  clear: both;
+}
+
+
+.RightIcon {
+  float: right;
+  max-width: 30%;
+}
+
+.LeftIcon {
+  float: left;
+  max-width: 30%;
+}
