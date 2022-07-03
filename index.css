@@ -24,7 +24,6 @@ h3 {
 }
 
 ul {
-  text-align: left;
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -33,6 +32,18 @@ p {
   text-align: center;
   margin-left: 5%;
   margin-right: 5%;
+}
+
+.pubTitle {
+  text-align: left;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+.pubDesc {
+  text-align: left;
+  margin-left: 0%;
+  margin-right: 0%;
 }
 
 .long_blank

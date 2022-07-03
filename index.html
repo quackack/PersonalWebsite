@@ -15,6 +15,8 @@
     <h1>Joshua Cook: Welcome to my Website!</h1>
     <div>
       <div class="rightcolumn">
+        <img class="picture" src="./StoneSeatPictureCropped.jpeg" title="Welcome to the hover text! I hope you like this pciture. My shirt is from SMBC!" alt="Picture of me sitting on a stone bench." />
+        <img class="picture" src="./TreePictureCropped.jpeg" title="I like climbing, even if I don't get to do it often." alt="Picture of me in a tree." />
         <img class="picture" src="./PandemicHeadshotCropped.jpg" title="You dare peek at my hover text? How dare you!? And on my pandemic photo too. Ever heard of social distancing?" alt="Headshot of me in a white room during the pandemic." />
         <img class="picture" src="./PandemicFullBodyCropped.jpg" title="Okay, not all the hover text will be interesting. Though that is my pattern on that shirt btw and you can buy it from teespring." alt="Picture of me in a park with a mask." />
       </div>
@@ -33,16 +35,39 @@
       <h2>Publications</h2>
       <ul>
         <li>
-        <a href="https://eccc.weizmann.ac.il/report/2020/122/">Size Bounds on Low Depth Circuits for Promise Majority </a>, to appear in Foundations of Software Technology and Theoretical Computer Science 2020 (FSTTCS 2020).
+		<p class="pubTitle"><a href="https://eccc.weizmann.ac.il/report/2022/093">More Verifier Efficient Interactive Protocols For Bounded Space</a>.</p>
+		
+		<p class="pubDesc">We introduce a new interactive protocol for space bounded computation that has a more efficient verifier. The protocol is very similar to the original interactive protocol for PSPACE by Shamir, but skips the reduction to a quantified boolean function. This allows us to avoid the relinearization step, taking a quadratic factor off of Shamir's runtime.</p>
         </li>
+		
         <li>
-        <a href="http://educationaldatamining.org/EDM2017/proc_files/papers/paper_35.pdf">Task and Timing: Separating Procedural and Tactical Knowledge in Student Models</a>, in the proceedings of the 10th International Conference on Educational Data Mining (EDM 2017).
+        <p class="pubTitle"><a href="https://eccc.weizmann.ac.il/report/2022/014/">Tighter MA/1 Circuit Lower Bounds From Verifier Efficient PCPs for PSPACE</a>. Presention, <a href="./RPE_Tighter_Circuit_Lower_Bounds_for_MA.pdf">Short</a> (For Research Preparation Exam).</p>
+		
+		<p class="pubDesc">This proves two results. The first is a tighter circuit lower bound for MA with one bit of advice. Specifically there is a problem requiring super linear circuits that Arthur can verify in only slightly more time than the minimum circuit size. More generally, the untrusted advice is input oblivious. A high level take away, vaguely speaking, is that even a tiny bit of extra untrusted advice can do more than slightly less trusted advice.</p>
+		
+		<p class="pubDesc">The other result, the main lemma used in this paper, is that the verifier for a PCP for a time T algorithm only requires time approximately log(T) (for T &ge; 2^n), even while making log(log(T)) queries. We suspect that this could be improved in many ways, such as using constantly many queries. But the new thing is getting fewer than log(T) queries while maintaining a quasi log(T) verifier time. This comes from closer analysis of the query function in a robust PCP so that the composed PCP does not spend too long finding the location of a symbol in the outer PCP.</p>
         </li>
-      </ul>
-      <h3>Minor Results And Preprints</h3>
-      <ul>
+		
         <li>
-        <a href="https://arxiv.org/abs/1906.10495">Approximating Unitary Preparations of Orthogonal Black Box States</a>, posted to arxiv in 2019. (Minor result, in need of significant refinement).
+        <p class="pubTitle"><a href="https://arxiv.org/abs/2104.00785v1">Unitarization Through Approximate Basis</a>.</p>
+		
+		<p class="pubDesc">In classical programming, you often have several values you want may want to compute, depending on the input. The goal of this project was to extend this to the quantum world. In particular, we want to extend this in such a way so as to leave no entangled garbage on any input, and to disturb as few states as possible. To do this, I solve an arguably more interesting problem: The Approximate Basis. Given black box access to circuits computing n quantum states, X, construct circuits outputting an approximation of orthonormal states, Y, such that every state in X can be approximated as a superposition of states in Y. Our main result is that approximate basis can be solved for n qubit states in polynomial time with error nearly polynomially small for up to log(n)/log(log(n)) states.</p>
+		
+		<p class="pubDesc">This started out as a class project with Scott Aaronson, and I thought it was a fun problem. It is non trivial because for most naive solutions for the unitarization problem, if you give the algorithm an output state as input, it fails to reset any auxiliary qubits to 0. While I found the problem fun, there aren't any clear applications.</p>
+        </li>
+		
+        <li>
+        <p class="pubTitle"><a href="https://eccc.weizmann.ac.il/report/2020/122/">Size Bounds on Low Depth Circuits for Promise Majority</a>, in Foundations of Software Technology and Theoretical Computer Science 2020 <a href="https://drops.dagstuhl.de/opus/frontdoor.php?source_opus=13260">(FSTTCS 2020)</a>. Presentation <a href="./Size_Bounds_on_Low_Depth_Circuits_for_Promise_Majority_Long_Presentation.pdf">Long</a> (Draft), <a href="./Size_Bounds_on_Low_Depth_Circuits_for_Promise_Majority_Short.pdf">Short</a>, and <a href="https://www.youtube.com/watch?v=C4exHjvIC84">Video</a>.</p>
+		
+		<p class="pubDesc">We define the promise majority problem as majority promised either at most epsilon of the input bits are 1, or at most epsilon of the input bits are 0. This is often called approximate majority. We show that for any constant epsilon, a depth 3 alternating circuit requires more n^(2 + a) gates for some constant a greater than 0. This shows some limitations in efficient derandomization of AC0 circuits using PRGs with minimal circuit depth increase. As a compliment, we show more efficient AC0 circuits for computing promise majority at larger depths.</p>
+        </li>
+		
+        <li>
+        <p class="pubTitle"><a href="http://educationaldatamining.org/EDM2017/proc_files/papers/paper_35.pdf">Task and Timing: Separating Procedural and Tactical Knowledge in Student Models</a>, in the proceedings of the 10th International Conference on Educational Data Mining (EDM 2017).</p>
+		
+		<p class="pubDesc">We introduced a learner model for open ended problem domains called Ranked Knowledge Tracing (RKT), and RKT-SR, RKT Skill Recognition, which extend the technique of Bayesian Knowledge Tracing. RKT uses a hidden markov model for skills, with independence for skills, like BKT, but applies it in a setting with many ranked options using different skills. RKT uses a geometric approach where we model the player as trying the optimal option, and if they fail it, trying the next, and so on. Finally we normalize the probabilities. This worked better to predict what a student would do than other, more naive predictions, for instance just asking if a student would use the ideal option based on their knowledge of that skill alone.</p>
+		
+		<p class="pubDesc">This was an early work I did as an undergrad, and has some major limitations. For instance, our parameter fitting was done by brute force, but not at a very high resolution. Still, models like this offer promise in domains with limited data, especially since the models have built in interpretability. Interpretability is very important in learner models, where we are not actually interested in accuracy, but are interested in determining student knowledge.</p>
         </li>
       </ul>
     </div>
@@ -65,25 +90,20 @@
     <h1>More About Me</h1>
     <p> Wow, really? You want to know something else about me? Well, why not give you my life story?</p>
     <p> I was born and raised in a small town in Missouri until I 11, when I moved to North Carolina. I was held back a grade as a child due to speech issues (mostly severe stuttering). I was home schooled from the second grade until I got my GED at 17.</p>
-    <p> My academic career began in earnest at a local community college called <a href="https://www.sandhills.edu/">Sandhills Community College</a>. There I got an associates degree in simulation and game design before transferring to NC State.
-    </p>
-    <p> While at Sandhills, I made several android apps under "cryospeedindustries". I haven't maintained these, so they are currently unavailable on the google play store unfortunately. I also interned at a small start up game company called SOF studios. 
+    <p> My academic career began in earnest at a local community college called <a href="https://www.sandhills.edu/">Sandhills Community College</a>. There I got an associates degree in simulation and game design before transferring to NC State. While at Sandhills, I made several android apps under "cryospeedindustries". I haven't maintained these, so they are currently unavailable on the google play store unfortunately. I also interned at a small start up game company called SOF studios. 
     </p>
     <p>
     At NC State, I doubled majored in computer science and mathematics. While at NC State, I did competitive programming for fun and did research under Collin Lynch in intelligent tutoring systems. I also interned with Amazon, who offered me a job.
     </p>
     <p>
-    I worked at Amazon for 2 years in SCOT: Supply Chain Optimization Technology. In particular, our team was SandOP: Sales and Operations Planning. I created software that helped Amazon Fulfillment Centers plan for its labor.
-    </P>
-    <p>
-    While at Amazon, I got free time to work on other projects. I got to take some classes at UT Austin, started making comics, and did internal events like making a quantum computing capture the flag category at a company wide security conference. 
+    I worked at Amazon for 2 years in SCOT: Supply Chain Optimization Technology. In particular, our team was SandOP: Sales and Operations Planning. I created software that helped Amazon Fulfillment Centers plan for its labor. While at Amazon, I got free time to work on other projects. I got to take some classes at UT Austin, started making comics, and did internal events like making a quantum computing capture the flag category at a company wide security conference. 
     </p>
     <p>
     And finally, I was accepted into UT Austin's PhD program researching under <a href="https://www.cs.utexas.edu/~danama/">Dana Moshkovitz</a> researching complexity theory and pseudorandomness.
     </p>
     <h2>Miscellaneous Things About Me</h2>
     <p>
-      I like bouldering, virtual reality, and computer hardware. I'm passionate about <a href="https://www.joincampaignzero.org/">criminal</a> <a href="https://gritsforbreakfast.blogspot.com/">justice reform</a> and <a href="https://www.beverlydanieltatum.com/published-works/">anti-racism</a>. Cinnamon is my favorite spice, I can put both of my legs behind my head, I'm not sure what else you want from me.
+      I like bouldering, virtual reality, and computer hardware. I'm passionate about <a href="https://www.joincampaignzero.org/">criminal</a> <a href="https://gritsforbreakfast.blogspot.com/">justice reform</a> and <a href="https://www.beverlydanieltatum.com/published-works/">anti-racism</a>. Cinnamon is my favorite spice, I can put both of my legs behind my head, I'm not sure what else you want from me. Gender: cat.
     </p>
     <h2>Please Stop Reading</h2>
     <p>
