@@ -35,9 +35,11 @@
       <h2>Publications</h2>
       <ul>
         <li>
-		<p class="pubTitle"><a href="https://eccc.weizmann.ac.il/report/2022/093">More Verifier Efficient Interactive Protocols For Bounded Space</a>.</p>
+		<p class="pubTitle"><a href="https://eccc.weizmann.ac.il/report/2022/093">More Verifier Efficient Interactive Protocols For Bounded Space</a>. Presentation, <a href="./More_Efficient_Interactive_Proofs_For_Bounded_Space.pdf">Short</a> (For FSTTCS).</p>
 		
-		<p class="pubDesc">We introduce a new interactive protocol for space bounded computation that has a more efficient verifier. The protocol is very similar to the original interactive protocol for PSPACE by Shamir, but skips the reduction to a quantified boolean function. This allows us to avoid the relinearization step, taking a quadratic factor off of Shamir's runtime.</p>
+		<p class="pubDesc">We introduce a new interactive protocol for space bounded computation that has a more efficient verifier. The protocol is very similar to the original interactive protocol for PSPACE by Shamir, but skips the reduction to a quantified boolean function. This allows us to avoid the relinearization step of Shen's proof, taking a log(T) factor off the runtime. The simpler format also improves the prover time, matching what GKR proves. We also specialize to randomized, and nondeterministic algorithms, giving better parameters than a reduction to deterministic algorithms, then applying our IP to that.</p>
+		
+		<p class="pubDesc">Shamir's main protocol is significantly slower than our protocol, requiring a complex conditioning process. But Shamir also includes a more optimized version of his protocol for logarithmic space, given two way access to a randomness tape. This is interesting on its own right, as logarithmic space with only one way access to randomness is in P, but also achieves better parameters, nearly matching our own. But Shamir's proof does <strong>not</strong> work well for sublinear space, and does not provide an efficient prover.</p>
         </li>
 		
         <li>
