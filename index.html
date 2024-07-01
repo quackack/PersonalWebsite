@@ -12,9 +12,13 @@
       <p>You're lucky that I didn't put any logic in my website.</p>
     </noscript>
     
-    <h1>Joshua Cook: Welcome to my Website!</h1>
+    <h1>Joshua Cook Otti: Welcome to my Website!</h1>
     <div>
       <div class="rightcolumn">
+		<a href="https://stemforestbooks.com/leafslibrary.html">
+        <img class="picture" src="./leafs_library_front_cover.avif" title="Please buy my book if you have any kids who are interested in binary search of fairies." alt="Leaf's Library Cover." />
+		</a>
+        <img class="picture" src="./my_sketch.avif" title="Hi, this is a sketch of me my wife drew of me. Is it accurate, well I'll let you judege that for yourself." alt="A hand drawn sketch of me in cyan overalls wearing a flower crown with a flower painted on my cheek." />
         <img class="picture" src="./StoneSeatPictureCropped.jpeg" title="Welcome to the hover text! I hope you like this pciture. My shirt is from SMBC!" alt="Picture of me sitting on a stone bench." />
         <img class="picture" src="./TreePictureCropped.jpeg" title="I like climbing, even if I don't get to do it often." alt="Picture of me in a tree." />
         <img class="picture" src="./PandemicHeadshotCropped.jpg" title="You dare peek at my hover text? How dare you!? And on my pandemic photo too. Ever heard of social distancing?" alt="Headshot of me in a white room during the pandemic." />
@@ -25,7 +29,7 @@
         My name is Joshua Cook, I am a PhD student studying complexity theory <a href="https://www.cs.utexas.edu/act/">at the university of Texas at Austin</a> under <a href="https://www.cs.utexas.edu/~danama/">Dana Moshkovitz</a>. If you wanted to see what I look like, you came to the right place (as of this writing)! Though if you just wanted my contact information, that's fine too.
       </p>
       <p>
-        If you are actually interested in any of my work, I'm glad you're here. I do <a href="https://quackack.com/">comics</a>, and research in complexity theory. This is my "professional" website, so I'll mostly use it to keep contact information and list my publications, or any other miscellaneous research, or academic things. Quackack.com will hold most of my non research related things.
+        If you are actually interested in any of my work, I'm glad you're here. I make <a href="https://stemforestbooks.com">children's books</a>, and research in complexity theory. This is my "professional" website, so I'll mostly use it to keep contact information and list my publications, or any other miscellaneous research, or academic things. My more adult focused, non-research stuff will stay at Quackack.com. But my kid friendly content will be at <a href="https://stemforestbooks.com">StemForestBooks.com</a>.
       </p>
       <h2>Contact Info</h2>
       <ul>
@@ -34,6 +38,23 @@
       </ul>
       <h2>Publications</h2>
       <ul>
+		<li>
+		<p class="pubTitle"><a href="https://eccc.weizmann.ac.il/report/2024/110/">Time and Space Efficient Deterministic Decoders</a>.
+		
+		<p class="pubDesc">We show that there exists codes that can be <strong>deterministically</strong> decoded in subpolynomial space and almost linear time. This was known to be true for locally decodable codes using randomized decoders, but it wasn't clear if this should be doable deterministically. In fact, Gronemeier showed non-adaptive decoders can't be time and space efficient, and we suspected these results could be extended to adaptive decoders, but they cannot.</p>
+		<p class="pubDesc">We actually show that all of the standard locally correctable codes have time and space efficient decoders. This corrector works by itertively correcting the input until it is successfully decoded. This approach gives a non-uniform, black box decoder for any locally correctable code, but we also give a time and space efficient <strong>uniform</strong> decoder for Reed-Muller codes using a new curve sampler.</p>
+
+		</li>
+		
+		<li>
+		<p class="pubTitle"><a href="https://eccc.weizmann.ac.il/report/2024/032/">Explicit Time and Space Efficient Encoders Exist Only With Random Access</a>, in CCC 2024.
+		
+		<p class="pubDesc">We show an explicit family of codes that can be encoded by a deterministic, uniform encoder in subpolynomial space and almost linear time. Bazzi and Mitter conjectured that any good code encoded by a time T space S algorithm required that S T &ge; n<sup>2</sup>. Interestingly, an earlier, non-explicit code, the repeat-accumulate code, with random puncturing also runs in subpolynomial space and almost linear time. Before this work it seemingly hadn't been noted that the repeat-accumulate codes disprove the Bazzi and Mitter conjecture. At least Ryan Williams knew these repeat accumulate codes were time and space efficient, although he seemed unaware of Bazzi and Mitter's conjecture.</p>
+		
+		<p class="pubDesc">One of our main motivations for studying this problem was to encode the output of low space algorithms in error correcting codes. The standard, black box way to do this reduces to a model we call sequential like access. We show that encoders with sequential like access to their input cannot be both time and space efficient. Specifically, for any good code, an encoder running in time T and space S with sequential like access to it's input requires T S<sup>2</sup> &ge; n<sup>2</sup>. Further we show this is tight. This shows that even in this more restricted setting, Bazzi and Mitter's conjecture is not true, but that there is a non-trivial time and space lower bound.</p>
+		
+		<p class="pubDesc">Our sequential model to access the input is essentially a multiheaded Turing machine where the heads can jump to the location of other heads. If one thinks of these heads as storing the state of an algorithm, moving forward as simulating the algorithm, and jumps as copying the state of the algorithm, we get our reduction from accessing the output of small space algorithms to the sequential model. This is a much more powerful model of computation than the streaming model.</p>
+		</li>
         <li>
 		<p class="pubTitle"><a href="https://eccc.weizmann.ac.il/report/2023/097/">Efficient Interactive Proofs for Non-Deterministic Bounded Space</a>, in RANDOM 2023 <a href="https://drops.dagstuhl.de/opus/volltexte/2023/18872/">(RANDOM 2023)</a>. Presentation, <a href="./RANDOM_InteractiveProofsForNondeterministicSpace_SLIDES.pdf">Short</a> (RANDOM 2023).</p>
 		
@@ -82,14 +103,32 @@
     <div class="clear"></div>
     
     <div>
+        <h1> Artistic Interests</h1>
+		
+        <img class="LeftIcon" src="./leafs_library_front_cover.avif" title="Cover of Leaf's Library book." />
+        <img class="RightIcon" src="./leafs_library_front_cover.avif" title="... Just buy my book please. Stop looking for hidden messages." />
+      <div class="centercolumn">
+        <h2>Stem Forest Books</h2>
+		
+        <p>I have a picture book for kids aged 5-10 teaching binary search! Check out <a href="https://stemforestbooks.com/leafslibrary.html">Leaf's Library</a> at <a href="https://stemforestbooks.com/">Stem Forest Books</a>. The books are drawn by my beautiful wife, Tayvin Otti, and are full of diverse fairys.
+        </p>
+		
+		<p>
+			In addition to this book, we are working on other merchandise like shirts. We also created a short AI generated <a href="https://soundcloud.com/joshua-cook-741385591/sets/leafs-lyrics-with-airons-ai-audio">album</a> (just the album, artwork is done in procreate).
+		</p>
+		<p>
+			I also wrote an early reader chapter book (around 10k words) teaching interactive proofs called "Leaf and The Liar" that Tayvin will also illustrate. More news on that, hopefully, soon.
+		</p>
+		</div>
+		
+    <div class="clear"></div>
+		
         <img class="LeftIcon" src="./QuackackIcon.png" title="I hope you weren't expecting a joke. Go to my comics if you want funny hover text. The nerve. Isn't the icon funny enough?" alt="A speaker with a duckbill taped to it." />
         <img class="RightIcon" src="./QuackackIcon.png" title="Congratulations on checking this picture! You win, um, this hover text? I hope you like it..." alt="A speaker with a duckbill taped to it." />
       <div class="centercolumn">
-        <h1> Artistic Interests</h1>
-        <p> Outside of my research, I do web comics at <a href="https://quackack.com/">quackack.com</a>. Think somewhere between xkcd and smbc with a bunch of complexity theory thrown in.
-        </p>
-        <p>
-        I also occasionally make children's books or shirt designs, and other random things. If you are interested in any of that, they are linked from quackack.com, and I will update there more regularly.
+        <h2>Quackack Web Comics</h2>
+		
+        <p>I do used to make web comics at <a href="https://quackack.com/">quackack.com</a>. Think somewhere between xkcd and smbc with a bunch of complexity theory thrown in. Maybe I will make more someday? Haven't for a while.
         </p>
       </div>
     </div>
@@ -111,7 +150,7 @@
     </p>
     <h2>Miscellaneous Things About Me</h2>
     <p>
-      I like bouldering, virtual reality, and computer hardware. I'm passionate about <a href="https://www.joincampaignzero.org/">criminal</a> <a href="https://gritsforbreakfast.blogspot.com/">justice reform</a> and <a href="https://www.beverlydanieltatum.com/published-works/">anti-racism</a>. Cinnamon is my favorite spice, I can put both of my legs behind my head, I'm not sure what else you want from me. Gender: cat.
+      I like bouldering, virtual reality, and computer hardware. I'm passionate about <a href="https://www.joincampaignzero.org/">criminal</a> <a href="https://gritsforbreakfast.blogspot.com/">justice reform</a> and <a href="https://www.beverlydanieltatum.com/published-works/">anti-racism</a>. Cinnamon is my favorite spice. I used to be able to put both of my legs behind my head, but then I gained some weight and now my belly is in the way. I'm not sure what else you want from me. Gender: cat.
     </p>
     <h2>Please Stop Reading</h2>
     <p>
